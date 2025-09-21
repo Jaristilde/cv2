@@ -1,1 +1,18 @@
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+# Set default colormap to grayscale
+plt.rcParams['image.cmap'] = 'gray'
 
+# Read image as grayscale
+# Correct relative path based on your folder structure
+img = cv2.imread('Mod2/visuals/Ahmir_n_Eli.png', cv2.IMREAD_GRAYSCALE)
+
+# Check if the image was loaded successfully
+if img is None:
+    print("Error: Could not read the image file. Please make sure 'Ahmir_n_Eli.png' is in the correct directory.")
+else:
+    # Display the image
+    plt.figure(figsize=(4, 4))
+    plt.imshow(img)
+    plt.show()
